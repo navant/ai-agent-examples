@@ -1,0 +1,9 @@
+model_list:
+  - model_name: gmistral-litellm # user-facing model alias
+    litellm_params: # all params accepted by litellm.completion() - https://docs.litellm.ai/docs/completion/input
+      model: ollama/mistral
+      api_base: https://d667-34-134-127-214.ngrok-free.app
+      api_key: "any" # does os.getenv("AZURE_API_KEY_EU")
+litellm_settings: # module level litellm settings - https://github.com/BerriAI/litellm/blob/main/litellm/__init__.py
+  drop_params: True
+  set_verbose: True
